@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner myScanner = new Scanner(System.in);
+	System.out.println("Enter the number of rows in  matrix");
+		int row1=myScanner.nextInt();
+			System.out.println("Enter the number of colums in  matrix");
+		int colum1=myScanner.nextInt();
+		
+		int[][] matrix1 = new int[row1][colum1];
+		System.out.println("Enter values in matrix in  matrix");
+		for(int i=0;i<row1;i++){
+		    for(int j=0;j<colum1;j++){
+		        matrix1[i][j]=myScanner.nextInt();
+		    }
+		        
+		}
+		System.out.println();
+	odd_even(matrix1,row1,colum1);
+
+	}	
+
+  public static void odd_even(int matrix1[][],int row1,int colum1){
+      int odd=0,even=0;
+     for(int i=0;i<row1;i++){
+         for(int j=0;j<colum1;j++){
+           if(matrix1[i][j]%2==0){
+               even++;
+           }else{
+               odd++;
+           }
+        
+     }
+ }
+ System.out.println("Odd element frequency: "+odd);
+ System.out.println("even element frequency: "+even);
+	
+
+
+}
+}
